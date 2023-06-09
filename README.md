@@ -6,7 +6,7 @@
 
 Progetto di Sistemi Distributi e Paralleli dell'Universita degli Studi di Perugia, Informatica 22-23.
 
-### Programmatori
+## Programmatori
 
 Christian Angileri <br>
 Alessio Cassieri
