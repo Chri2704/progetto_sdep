@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "build": "laravel-mix build",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
