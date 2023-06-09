@@ -12,7 +12,7 @@ Progetto di Sistemi Distributi e Paralleli dell'Universita degli Studi di Perugi
 
 ### Programmatori
 
-Christian Angileri
+Christian Angileri <br>
 Alessio Cassieri
 
 ## License
