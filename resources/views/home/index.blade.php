@@ -27,12 +27,24 @@
             <li class="">
                 <a class="nav-link active" href="">Contact</a>
             </li>
-            <li class="navbar-spaced">
-                <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
-            </li>
-            <li class="navbar-spaced">
-                <a class="btn btn-success" href="{{route('login')}}">Login</a>
-            </li>
+            
+            <!-- se è stato effettuato login si vede solo nome che se cliccato porta alla dashboard altrimenti tasti registra e login -->
+            @if (Route::has('login')) 
+
+                @auth
+                    <li class="navbar-spaced">
+                        <a class="btn btn-primary" href="{{route('dashboard')}}">{{Auth::user()->name }}</a>
+                    </li>
+                @else
+                    <li class="navbar-spaced">
+                        <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
+                    </li>
+                    <li class="navbar-spaced">
+                        <a class="btn btn-success" href="{{route('login')}}">Login</a>
+                    </li>
+
+            @endauth
+            @endif
         </ul>
     </div>
 </nav>
