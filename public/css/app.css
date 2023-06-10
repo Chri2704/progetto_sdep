@@ -14,6 +14,10 @@
   border-color: #e5e7eb; /* 2 */
 }
 
+.navbar-spaced{
+  padding-right: 20px;
+}
+
 ::before,
 ::after {
   --tw-content: '';
@@ -80,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
+  font-size:smaller;
   font-weight: inherit;
 }
 
@@ -133,6 +137,10 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+}
+
+.pio{
+  font-size:xx-large;
 }
 
 sub {
