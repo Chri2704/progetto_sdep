@@ -19,10 +19,7 @@ class CreateProducts extends Migration
             $table->string('nome_prodotto');
             $table->text('descrizione')->nullable();
             $table->integer('prezzo');
-            $table->integer('quantità_disponibile');
-            
-
-            
+            $table->integer('disponibili');
         });
     }
 
