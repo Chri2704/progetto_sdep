@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 class ProductsController extends Controller
 {
-    //
-    function show(){ //permette di inviare i dati dal database alla view
+    function showCatalogo(){ //permette di inviare i dati dal database alla view
         $products=Product::all();
-        return view('home/index',compact('products'));
+        return view('catalogo',compact('products'));
     }
 }

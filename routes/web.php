@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\Homecontroller; //route Home controller
+use Laravel\Fortify\RoutePath;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,11 @@ use App\Http\Controllers\Homecontroller; //route Home controller
 */
 
 route::get('/', [Homecontroller::class, 'index']); //in questo modo nell' / verrà richiamato nel controller home controller la funzione index
-Route::get('/',[ProductsController::class,'show']); //per passare i dati alla view dal controller
 route::post('/upload_post', [Homecontroller::class, 'upload']); 
-
+Route::get('/catalogo', function () {
+    return view('catalogo');
+})->name('catalogo');
+//Route::get(RoutePath::for('catalogo','/catalogo'),[ProductsController::class,'showCatalogo']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
