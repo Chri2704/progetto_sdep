@@ -49,7 +49,7 @@
     </div>
 </nav>
 
-<table border="1">
+<table border="1"> 
     @foreach($products as $product)
     <tr>
         <td>{{$product['nome_prodotto']}}</td>
