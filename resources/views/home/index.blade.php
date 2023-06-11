@@ -22,7 +22,7 @@
 
         <ul class="nav ms-auto navbar-spaced">
             <li class="">
-                <a class="nav-link active" aria-current="page" href="">Catalogo</a> <!-- href="{{ route('catalogo') }}" -->
+                <a class="nav-link active" aria-current="page" href="/catalogo">Catalogo</a>
             </li>
             <li class="">
                 <a class="nav-link active" href="">Contact</a>
