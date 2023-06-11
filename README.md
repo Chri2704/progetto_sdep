@@ -4,7 +4,7 @@ Sito web per la gestione e la vendita di tortellini, utilizzando Laravel.
 
 ## Idea
 
-Progetto di Sistemi Distributi e Paralleli dell'Universita degli Studi di Perugia, Informatica 22-23. Trovate il testo del progetto <a href="https://github.com/Cassio7/progetto_sdep/blob/main/Progetto%20E-commerce%20tortellini.pdf">qui</a>
+Progetto di Sistemi Distributi e Paralleli dell'Universita degli Studi di Perugia, Informatica 22-23. Trovate il testo del progetto <a href="https://github.com/Cassio7/progetto_sdep/blob/main/Progetto%20E-commerce%20tortellini.pdf">qui</a>.
 
 ## Programmatori
 
