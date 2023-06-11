@@ -22,7 +22,7 @@
 
         <ul class="nav ms-auto navbar-spaced">
             <li class="">
-                <a class="nav-link active" aria-current="page" href="#">Catalogo</a>
+                <a class="nav-link active" aria-current="page" href="">Catalogo</a> <!-- href="{{ route('catalogo') }}" -->
             </li>
             <li class="">
                 <a class="nav-link active" href="">Contact</a>
@@ -74,18 +74,6 @@
         </ul>
     </div>
 </nav>
-
-<table border="1"> 
-    @foreach($products as $product)
-    <tr>
-        <td>{{$product['nome_prodotto']}}</td>
-        <td>{{$product['descrizione']}}</td>
-        <td>{{$product['prezzo']}}</td>
-        <td>{{$product['disponibili']}}</td>
-        <td><img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" width="250px" height="250px"></td>
-    </tr>
-    @endforeach
-</table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
