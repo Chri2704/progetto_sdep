@@ -18,7 +18,13 @@ class Homecontroller extends Controller //classe home controller
         $data->prezzo = $request->price;
         $data->descrizione = $request->description;
         //quantità disponibile
-        $data->image = $request->image;
+
+        //passi per salvare immagine
+        $file = $request->file('image');
+        $extention = $file->getClientOriginalExtension();
+        $filename = time().'.'.$extention;
+        $file->move('images/db/',$filename);
+        $data->image = $filename;
 
         $data->save(); //penso salvi il formato interno di $data
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\Homecontroller; //route Home controller
 
 /*
@@ -16,7 +16,7 @@ use App\Http\Controllers\Homecontroller; //route Home controller
 */
 
 route::get('/', [Homecontroller::class, 'index']); //in questo modo nell' / verrà richiamato nel controller home controller la funzione index
-
+Route::get('/',[ProductsController::class,'show']); //per passare i dati alla view dal controller
 route::post('/upload_post', [Homecontroller::class, 'upload']); 
 
 Route::middleware([

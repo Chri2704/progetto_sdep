@@ -49,9 +49,17 @@
     </div>
 </nav>
 
-<div>
-    <h1>Il primo tortellino: </h1>
-</div>
+<table border="1">
+    @foreach($products as $product)
+    <tr>
+        <td>{{$product['nome_prodotto']}}</td>
+        <td>{{$product['descrizione']}}</td>
+        <td>{{$product['prezzo']}}</td>
+        <td>{{$product['disponibili']}}</td>
+        <td><img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" width="250px" height="250px"></td>
+    </tr>
+    @endforeach
+</table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
