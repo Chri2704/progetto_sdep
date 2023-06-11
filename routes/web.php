@@ -15,12 +15,9 @@ use App\Http\Controllers\Homecontroller; //route Home controller
 |
 */
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 route::get('/', [Homecontroller::class, 'index']); //in questo modo nell' / verrà richiamato nel controller home controller la funzione index
 
+route::post('/upload_post', [Homecontroller::class, 'upload']); 
 
 Route::middleware([
     'auth:sanctum',

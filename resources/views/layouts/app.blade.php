@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -22,10 +26,8 @@
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
-paolol
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
-aiuto
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">
@@ -34,7 +36,6 @@ aiuto
                     </div>
                 </header>
             @endif
-paolone
             <!-- Page Content -->
             <main>
                 {{ $slot }}
@@ -44,5 +45,10 @@ paolone
         @stack('modals')
 
         @livewireScripts
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>

@@ -17,10 +17,10 @@ class CreateProducts extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nome_prodotto');
-            $table->text('descrizione')->nullable();
+            $table->text('descrizione');
             $table->integer('prezzo');
-            $table->integer('quantità_disponibile');
-            
+            $table->integer('quantità_disponibile')->nullable();
+            $table->string('image');
 
             
         });
