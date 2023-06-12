@@ -1,6 +1,7 @@
 <?php
 
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Fortify\Features;
 
 return [
@@ -60,9 +61,14 @@ return [
     | and the user is authenticated. You are free to change this value.
     |
     */
-
-    'home' => RouteServiceProvider::HOME,
-
+    
+    //redirezionamento dopo il login in base all'utente, se admin apre dashboard sennò homepage
+    'home' => function(){
+        if(Auth::user()->admin == 0)
+            return RouteServiceProvider::HOME;
+        else
+            return RouteServiceProvider::DASH;
+    },
     /*
     |--------------------------------------------------------------------------
     | Fortify Routes Prefix / Subdomain
