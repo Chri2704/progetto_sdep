@@ -21,20 +21,13 @@ td {
     width: 50%;
 }
 </style>
+<h1 class="fs-1" style="text-align: center;">Catalogo prodotti disponibili</h1>
+<br>
 <table>
-    <tr>
-        <td>Nome prodotto</td>
-        <td>Descrizione</td>
-        <td>Prezzo</td>
-        <td>Disponibilità</td>
-        <td>Immagine</td>
-    </tr>
     @foreach($products as $product)
     <tr>
         <td>{{$product['nome_prodotto']}}</td>
         <td>{{$product['descrizione']}}</td>
-        <td>{{$product['prezzo']}}</td>
-        <td>{{$product['disponibili']}}</td>
         <td><img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg"></td>
     </tr>
     @endforeach
