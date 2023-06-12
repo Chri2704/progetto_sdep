@@ -23,7 +23,7 @@
 
         <ul class="nav ms-auto navbar-spaced">
             <li class="">
-                <a class="nav-link active" aria-current="page" href="products/catalogo">Catalogo</a>
+                <a class="nav-link active" aria-current="page" href="catalogo">Catalogo</a>
             </li>
             <li class="">
                 <a class="nav-link active" href="">Contact</a>

@@ -8,6 +8,6 @@ class ProductsController extends Controller
 {
     function showCatalogo(){ //permette di inviare i dati dal database alla view
         $products=Product::all();
-        return view('products/catalogo',compact('products'));
+        return view('catalogo',compact('products'));
     }
 }
