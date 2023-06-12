@@ -16,7 +16,7 @@
 {{ $slot }}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand pio" href="#">
+        <a class="navbar-brand pio" href="/">
             <img src="/images/logo_minimal.jpg" alt="" width="40" height="auto" class="d-inline-block align-text-top">
             Tad&Apd
         </a>
@@ -26,7 +26,7 @@
                 <a class="nav-link active" aria-current="page" href="catalogo">Catalogo</a>
             </li>
             <li class="">
-                <a class="nav-link active" href="/contatti">Contact</a>
+                <a class="nav-link active" href="contatti">Contact</a>
             </li>
             
             <!-- se è stato effettuato login si vede solo nome che se cliccato porta alla dashboard altrimenti tasti registra e login -->
