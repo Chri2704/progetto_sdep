@@ -26,7 +26,7 @@
                 <a class="nav-link active" aria-current="page" href="products/catalogo">Catalogo</a>
             </li>
             <li class="">
-                <a class="nav-link active" href="">Contact</a>
+                <a class="nav-link active" href="/contatti">Contact</a>
             </li>
             
             <!-- se è stato effettuato login si vede solo nome che se cliccato porta alla dashboard altrimenti tasti registra e login -->

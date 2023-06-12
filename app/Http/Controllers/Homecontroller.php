@@ -32,5 +32,10 @@ class Homecontroller extends Controller //classe home controller
         return redirect()->back(); //alla fine della funzione ritorna nella stessa pagina (quindi di nuovo nella dashbpard)
 
     }
+
+
+    public function contatti(){
+        return view('contatti');
+    }
 }
 

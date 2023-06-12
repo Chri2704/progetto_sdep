@@ -19,6 +19,13 @@ use Laravel\Fortify\RoutePath;
 route::get('/', [Homecontroller::class, 'index']); //in questo modo nell' / verrà richiamato nel controller home controller la funzione index
 route::post('/upload_post', [Homecontroller::class, 'upload']); 
 Route::get('products/catalogo',[ProductsController::class,'showCatalogo']);
+
+route::get('contatti', [Homecontroller::class, 'contatti']);
+
+// Route::get('/contatti', function () {
+//     return view('contatti');
+// });
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
