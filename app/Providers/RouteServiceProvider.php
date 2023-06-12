@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/';
+    public const DASH = '/dashboard'; //nuova costante per andare in dashboard dopo login
 
     /**
      * The controller namespace for the application.
