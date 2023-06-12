@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    op
-</body>
-</html>
+<x-guest-layout>
+</x-guest-layout>
+<h1 class="fs-1" style="text-align: center;">Contatti azienda</h1>
