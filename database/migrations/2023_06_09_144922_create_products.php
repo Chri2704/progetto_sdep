@@ -20,7 +20,7 @@ class CreateProducts extends Migration
             $table->text('descrizione');
             $table->integer('prezzo');
             $table->integer('disponibili');
-            $table->string('image');
+            $table->string('image')->nullable();
         });
     }
 

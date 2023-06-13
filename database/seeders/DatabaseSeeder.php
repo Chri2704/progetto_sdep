@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         //\App\Models\User::factory(10)->create();
         $this->call(Admin::class);
         $this->call(Amico::class);
-        //$this->call(TortDyb::class); //aggiunge il tortellino alla dybala
+        $this->call(TortDyb::class); //aggiunge il tortellino alla dybala
     }
 }
