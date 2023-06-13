@@ -25,8 +25,15 @@
             <br>
             {{$product['descrizione']}} 
 
-        <!-- <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg"> -->
+        <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg">
+        @if (Route::has('login'))
+        @auth
         <button type="submit" class="btn btn-primary bg-primary">Acquista</button>
+        
+        @else
+        <h1>fekjshfuisebfhs</h1>
+        @endauth
+        @endif
     </form>
     @endforeach
 </div>
