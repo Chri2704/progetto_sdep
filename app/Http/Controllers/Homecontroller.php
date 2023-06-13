@@ -33,7 +33,7 @@ class Homecontroller extends Controller //classe home controller
 
     }
     function new_order(Request $request){
-
+        
     }
     public function contatti(){
         return view('contatti');
