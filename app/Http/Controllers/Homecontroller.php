@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-
+use App\Models\Orders;
 
 class Homecontroller extends Controller //classe home controller
 {
@@ -32,10 +32,12 @@ class Homecontroller extends Controller //classe home controller
         return redirect()->back(); //alla fine della funzione ritorna nella stessa pagina (quindi di nuovo nella dashbpard)
 
     }
-
-
     public function contatti(){
         return view('contatti');
+    }
+    function showCarrello(){ //permette di inviare i dati dal database alla view
+        $orders=Orders::all();
+        return view('carrello',compact('orders'));
     }
 }
 
