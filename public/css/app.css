@@ -11,6 +11,13 @@
   display: inline-block;
 }
 
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -25,6 +32,55 @@
   display: block;
 }
 
+.boldi{
+  font-weight: bold;
+}
+
+.giga{
+  font-size:xx-large;
+}
+
+.tortelli{
+
+height: 1000px;
+overflow:hidden;
+background-size: cover; /* Adatta l'immagine per coprire l'intero elemento */
+background-position: center;
+margin: -100px 0px -200px 0px;
+}
+
+.tortellini{
+  height: 1000px;
+  overflow:hidden;
+  background-size: cover; /* Adatta l'immagine per coprire l'intero elemento */
+  background-position: center;
+  margin: -150px 0px -150px 0px; 
+  /* sopra boh sotto boh */
+}
+
+.zoom-image {
+  transition: transform 0.3s ease; /* Aggiunge una transizione fluida all'effetto di zoom */
+
+}
+
+.zoom-image:hover {
+  transform: scale(1.01); /* Applica uno zoom del 120% all'immagine al passaggio del mouse */
+}
+
+.paddings{
+  height: 467px;
+  width: 670px;
+  margin: 0px 0px -300px 0px;
+}
+
+
+.foto_sotto{
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+
+}
 
 *,
 ::before,
@@ -79,6 +135,11 @@ body {
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
+
+.contando{
+position:absolute;
+margin-bottom: 14%;
+}
 
 hr {
   height: 0; /* 1 */
@@ -158,6 +219,20 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+}
+
+
+.image-zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.3s ease;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1); /* Modifica il valore per regolare il livello di zoom */
 }
 
 .pio{
