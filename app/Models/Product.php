@@ -9,4 +9,9 @@ class Product extends Model
 {
     use HasFactory;
     protected $table = 'products'; //riferimento alla tabella nel database
+
+    public function ordini()
+        {
+            return $this->hasMany(Orders::class);
+        }
 }
