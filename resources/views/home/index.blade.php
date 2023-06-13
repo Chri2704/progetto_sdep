@@ -10,7 +10,7 @@
     <div class="carousel-item active">
       <img src="/images/logo.jpg" class="w-100 tortellini " loading="">
       <div class="carousel-caption d-none d-md-block contando">
-      <button type="button" class="btn btn-secondary bg-secondary"><a class="container" href="catalogo">Scopri di più</a></button>
+      <button type="button" class="btn btn-secondary bg-secondary"><a class="" href="catalogo">Scopri di più</a></button>
         <!-- <h5 class="giga boldi">Contattaci!</h5>
         <p class="giga ">spediamo in tutta Italia</p> -->
       </div>
