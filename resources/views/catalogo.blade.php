@@ -18,12 +18,14 @@
 <div class="center">
     @foreach($products as $product)
     <form action="{{url('new_order')}}" method="POST" enctype="multipart/form-data">
-    <br> <h2 name="product_id">{{$product['id']}}</h2>
-        {{$product['nome_prodotto']}}
-        <br>
-        {{$product['descrizione']}} 
+     @csrf   
+        <input type="hidden" name="product_id" value="{{ $product['id']}}">
+        <br> <h2>{{$product['id']}}</h2>
+            {{$product['nome_prodotto']}}
+            <br>
+            {{$product['descrizione']}} 
 
-        <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg">
+        <!-- <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg"> -->
         <button type="submit" class="btn btn-primary bg-primary">Acquista</button>
     </form>
     @endforeach
