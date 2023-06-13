@@ -33,7 +33,14 @@ class Homecontroller extends Controller //classe home controller
 
     }
     function new_order(Request $request){
-        
+        $order = new Orders;
+        $order->product_id = $request-> product_id;
+        // $order->user_id = auth()->id;
+
+        $order->save();
+
+        return redirect()->back(); 
+
     }
     public function contatti(){
         return view('contatti');

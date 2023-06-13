@@ -20,7 +20,9 @@
     <form action="{{url('new_order')}}" method="POST" enctype="multipart/form-data">
     <br> <h2 name="product_id">{{$product['id']}}</h2>
         {{$product['nome_prodotto']}}
+        <br>
         {{$product['descrizione']}} 
+
         <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg">
         <button type="submit" class="btn btn-primary bg-primary">Acquista</button>
     </form>

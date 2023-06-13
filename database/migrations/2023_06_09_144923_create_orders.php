@@ -17,8 +17,8 @@ class CreateOrders extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('user_id');
-            $table->integer('quantity');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->integer('quantity')->nullable();
             $table->foreign('product_id')->references('id')->on('products'); //si puo mettere oondeletecascade
             $table->foreign('user_id')->references('id')->on('users');
         });
