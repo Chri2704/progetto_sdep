@@ -64,7 +64,7 @@ margin: -100px 0px -200px 0px;
 }
 
 .zoom-image:hover {
-  transform: scale(1.01); /* Applica uno zoom del 120% all'immagine al passaggio del mouse */
+  transform: scale(1.03); /* Applica uno zoom del 120% all'immagine al passaggio del mouse */
 }
 
 .paddings{
@@ -74,13 +74,27 @@ margin: -100px 0px -200px 0px;
 }
 
 
-.foto_sotto{
-  width: 120%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-
+.centrino {
+  position: relative;
+  height: 40vh; /* Imposta l'altezza del contenitore in base alle tue esigenze */
 }
+
+.pulsantino {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Aggiungi eventuali stili al pulsante */
+}
+
+/* .foto_sotto{
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+
+
+} */
 
 *,
 ::before,
@@ -138,7 +152,7 @@ body {
 
 .contando{
 position:absolute;
-margin-bottom: 14%;
+margin-bottom: 9.5%;
 }
 
 hr {
