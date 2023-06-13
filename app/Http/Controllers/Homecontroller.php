@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Orders;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Query\JoinClause;
 
 class Homecontroller extends Controller //classe home controller
 {
@@ -36,7 +38,7 @@ class Homecontroller extends Controller //classe home controller
         $order = new Orders; //oggetto ordine
         $order->product_id = $request-> product_id; //in questo modo posso prendere l'input che ha name = product_id e lo metto dentro l'oggetto order
         $order->user_id = auth()->id(); //in questo modo passo l'id senza fare request
-
+        $order->quantity = $request->quantity; //quantità prodotti ordinati
         $order->save(); //salvo i dati dentro orders
 
         return redirect()->back(); //torno nella stessa pagina
@@ -46,8 +48,14 @@ class Homecontroller extends Controller //classe home controller
         return view('contatti');
     }
     function showCarrello(){ //permette di inviare i dati dal database alla view
-        $orders=Orders::all();
-        return view('carrello',compact('orders'));
+        //utilizzo DB perchè utilizzando il modello Orders la join non mi permette di utilizzare
+        //4 parametri ma soltanto 2!
+        $orders = DB::table('orders')
+        ->join('products','orders.product_id',"=",'products.id') //join che permette di prendere dati prodotto
+        ->select('orders.*','descrizione','nome_prodotto','prezzo','image','disponibili')
+        ->where('user_id',auth()->id()) //prendo soltanto gli ordini dell utente che è loggato atm
+        ->get(); //prende risultato query
+        return view('carrello',compact('orders')); //invia i dati a carrello.blade.php tramite $orders
     }
 }
 

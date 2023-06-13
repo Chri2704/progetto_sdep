@@ -31,6 +31,13 @@
         {{$product['descrizione']}}
 
         <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg">
+        <select name="quantity">
+            <option value="1" selected>1</option>
+            <!-- for che va fino a 10 per il numero prodotti -->
+            @for ($i=2 ; $i<=10 ; $i++)
+                <option value="{{$i}}">{{$i}}</option>
+            @endfor
+        </select>
         <!-- controlla se utente è loggato, se si permette ordine senno login -->
         @if (Route::has('login'))
         @auth
