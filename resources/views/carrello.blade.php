@@ -3,6 +3,12 @@
 <h1 class="fs-1" style="text-align: center;">Carrello</h1> 
 <!-- permette di stampare gli ordini e relative informazioni al prodotto,
 dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> invece che [] -->
+
+@php
+         $totale = 0; 
+    @endphp
+
+
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +23,8 @@ dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> i
         </tr>
     </thead>
     <tbody>
+
+
         @foreach ($orders as $order)
         <tr>
             <th scope="row">#{{$order->id}}</th>
@@ -26,7 +34,13 @@ dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> i
             <td>{{$order->descrizione}}</td>
             <td style="text-align: center;">{{$order->quantity}}</td>
             <td style="text-align: center;">{{$order->prezzo}}€</td>
-            <td style="text-align: center;">{{$order->prezzo * $order->quantity}}€</td>
+            <td style="text-align: center;">
+                @php
+                    $subtotal = $order->prezzo * $order->quantity; // Calcola il subtotal per l'ordine corrente
+                    $totale += $subtotal; // Aggiorna il totale sommando il subtotal all'importo totale precedente
+                @endphp
+                {{$subtotal}}
+            €</td>
             <td>
                 <button type="button" class="btn btn-outline-danger" name="{{$order->id}}">Cancella</button>
             </td>
@@ -35,9 +49,11 @@ dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> i
     </tbody>
 </table>
 <label class="input-group-text rounded">
-    Totale: 
-    @foreach ($orders as $order)
 
-    @endforeach
+<!--  Stampa il totale aggiornato -->
+
+    @php
+        echo "Totale: $totale €"; 
+    @endphp
 </label>
 <button type="button" class="btn btn-outline-success">Acquista</button>
