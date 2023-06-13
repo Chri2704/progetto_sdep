@@ -29,11 +29,11 @@
         @if (Route::has('login'))
         @auth
         <button type="submit" class="btn btn-primary bg-primary">Acquista</button>
-        </form>
+        
         @else
         <a class="btn btn-success" href="{{route('login')}}">Login per acquistare</a>
         @endauth
         @endif
-    
+    </form>
     @endforeach
 </div>
