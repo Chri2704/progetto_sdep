@@ -18,6 +18,7 @@ use Laravel\Fortify\RoutePath;
 
 route::get('/', [Homecontroller::class, 'index']); //in questo modo nell' / verrà richiamato nel controller home controller la funzione index
 route::post('/upload_post', [Homecontroller::class, 'upload']); 
+route::post('/new_order',[Homecontroller::class,'new_order']);
 
 route::get('contatti', [Homecontroller::class, 'contatti']);
 
