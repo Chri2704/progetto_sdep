@@ -18,7 +18,7 @@
 <div class="center">
     @foreach($products as $product)
     <form action="{{url('new_order')}}" method="POST" enctype="multipart/form-data">
-    <br> <h2 name="{{$product['id']}}">{{$product['nome_prodotto']}}</h2>
+    <br> <h2 name="product_id">{{$product['nome_prodotto']}}</h2>
         {{$product['descrizione']}} 
         <img src="{{ asset('images/db/'.$product->image)}}" alt="Immagine" class="centerimg">
         <button type="submit" class="btn btn-primary bg-primary">Acquista</button>
