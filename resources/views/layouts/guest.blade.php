@@ -34,12 +34,14 @@
 
             <ul class="nav ms-auto navbar-spaced">
                 <li class="">
-                    <a class="nav-link active" aria-current="page" href="catalogo">Catalogo</a>
+                    <a class="nav-link active" aria-current="page" href="catalogo">Prodotti</a>
                 </li>
                 <li class="">
-                    <a class="nav-link active" href="contatti">Contact</a>
+                    <a class="nav-link active" href="">Menù</a>
                 </li>
-
+                <li class="nav ms-auto navbar-spaced">
+                    <a class="nav-link active" href="contatti">Chi siamo</a>
+                </li>
                 <!-- se è stato effettuato login si vede solo nome che se cliccato porta alla dashboard altrimenti tasti registra e login -->
                 @if (Route::has('login'))
 
