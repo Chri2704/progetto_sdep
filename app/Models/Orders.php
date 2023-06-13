@@ -9,11 +9,13 @@ class Orders extends Model
 {
     use HasFactory;
 
+    protected $table = 'orders';
+
     public function utente(){
         return $this->belongsTo(User::class); //ogni ordine appartiene ad un utente
     }
 
     public function prodotto(){
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class); //un prodotto può essere associato a molti ordine
     }
 }
