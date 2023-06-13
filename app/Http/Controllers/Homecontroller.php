@@ -33,13 +33,13 @@ class Homecontroller extends Controller //classe home controller
 
     }
     function new_order(Request $request){
-        $order = new Orders;
-        $order->product_id = $request-> product_id;
-        $order->user_id = auth()->id();
+        $order = new Orders; //oggetto ordine
+        $order->product_id = $request-> product_id; //in questo modo posso prendere l'input che ha name = product_id e lo metto dentro l'oggetto order
+        $order->user_id = auth()->id(); //in questo modo passo l'id senza fare request
 
-        $order->save();
+        $order->save(); //salvo i dati dentro orders
 
-        return redirect()->back(); 
+        return redirect()->back(); //torno nella stessa pagina
 
     }
     public function contatti(){
