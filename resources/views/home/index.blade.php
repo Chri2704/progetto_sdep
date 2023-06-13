@@ -49,19 +49,3 @@
 
   </div>
 </div>
-
-<!-- <div class="image-container">
-    <div class="image-container__item">
-        <img src="/images/ricetta.jpg" class="zoom-image" alt="">
-        <button class="image-container__button">Pulsante</button>
-    </div>
-
-    <div class="image-container__item">
-        <img src="/images/ranocchia.jpg" class="zoom-image" alt="">
-        <button class="image-container__button">Pulsante</button>
-    </div>
-</div>
-
-<div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>ciao
-</div> -->
