@@ -57,7 +57,7 @@
                 </li>
                 @else
                 <li class="">
-                    <a class="nav-link active" href="">Menù</a>
+                    <a class="nav-link active" href="menu">Menù</a>
                 </li>
                 @endif
                 @if (request()->url() == url('/contatti'))

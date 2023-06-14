@@ -72,8 +72,9 @@ $totale = 0;
     echo "Totale: $totale €";
     @endphp
 </label>
-
-<button type="button" class="btn btn-outline-success">Acquista</button>
+<form action="{{url('shop')}}" method="POST" enctype="multipart/form-data">
+    <button type="submit" name="shop" value="{{$orders}}" class="btn btn-outline-success">Acquista</button>
+</form>
 @else
 <p class="fs-2 centerr">Il tuo carrello è vuoto!</p>
 @endif

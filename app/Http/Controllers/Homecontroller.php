@@ -47,6 +47,9 @@ class Homecontroller extends Controller //classe home controller
     public function contatti(){
         return view('contatti');
     }
+    function menu(){
+        return view('menu');
+    }
     function showCarrello(){ //permette di inviare i dati dal database alla view
         //utilizzo DB perchè utilizzando il modello Orders la join non mi permette di utilizzare
         //4 parametri ma soltanto 2!
