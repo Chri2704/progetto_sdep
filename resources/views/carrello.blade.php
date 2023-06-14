@@ -12,7 +12,12 @@
 dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> invece che [] -->
 @if (session('alert'))
     <div class="alert alert-danger">
-        <p style="text-align: center;" >{{ session('alert') }}</p>
+        <p style="text-align: center;" class="fs-4" >{{ session('alert') }}</p>
+    </div>
+@endif
+@if (session('alert2'))
+    <div class="alert alert-primary">
+        <p style="text-align: center;" class="fs-4" >{{ session('alert2') }}</p>
     </div>
 @endif
 @php
@@ -73,7 +78,8 @@ $totale = 0;
     @endphp
 </label>
 <form action="{{url('shop')}}" method="POST" enctype="multipart/form-data">
-    <button type="submit" name="shop" value="{{$orders}}" class="btn btn-outline-success">Acquista</button>
+    @csrf
+    <button type="submit" class="btn btn-outline-success">Acquista</button>
 </form>
 @else
 <p class="fs-2 centerr">Il tuo carrello è vuoto!</p>

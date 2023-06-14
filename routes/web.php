@@ -30,6 +30,8 @@ Route::get('/carrello',[Homecontroller::class,'showCarrello']);
 
 route::post('/delete', [Homecontroller::class,'deleteCarrello']);
 
+route::post('shop',[Homecontroller::class,'shopCarrello']);
+
 Route::get('/catalogo',[ProductsController::class,'showCatalogo']);
 
 Route::middleware([

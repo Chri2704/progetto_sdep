@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Orders;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Query\JoinClause;
-
+use Illuminate\Support\Facades\DB; //serve per query modifica
+use Illuminate\Support\Facades\Auth; //serve per mail utente
 class Homecontroller extends Controller //classe home controller
 {
     public function index(){  //la funzione ritornerà il file home.index.php che verrà usata come home page
@@ -65,7 +64,13 @@ class Homecontroller extends Controller //classe home controller
         // fa il drop della riga della tabella orders, dove ordine id è uguale a quello selezionato
         // dall'utente nel carrello
         $deleted = DB::table('orders')->where('id',$request->delete)->delete();
-        return redirect()->back()->with('alert', 'Eliminato con successo!'); //torno nella stessa pagina
+        return redirect()->back()->with('alert', 'Eliminato con successo!'); //torno nella stessa pagina con alert
+    }
+    function shopCarrello(){
+        //elimina tutti gli ordini dell'user e manda alet
+        $deleted = DB::table('orders')->where('user_id',auth()->id())->delete();
+        return redirect()->back() //prende anche la mail dell utente
+        ->with('alert2', 'I tuoi prodotti sono stati acquistati, per maggiori info consulare la mail: '.Auth::user()->email); 
     }
 }
 
