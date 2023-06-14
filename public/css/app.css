@@ -11,6 +11,11 @@
   display: inline-block;
 }
 
+.contatti{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .custom-row {
   display: flex;
   flex-wrap: wrap;
