@@ -41,7 +41,7 @@ class Homecontroller extends Controller //classe home controller
         $order->quantity = $request->quantity; //quantità prodotti ordinati
         $order->save(); //salvo i dati dentro orders
 
-        return redirect()->back(); //torno nella stessa pagina
+        return redirect()->back()->with('alert', 'Inserito nel carrello!'); //torno nella stessa pagina
 
     }
     public function contatti(){
@@ -62,7 +62,7 @@ class Homecontroller extends Controller //classe home controller
         // fa il drop della riga della tabella orders, dove ordine id è uguale a quello selezionato
         // dall'utente nel carrello
         $deleted = DB::table('orders')->where('id',$request->delete)->delete();
-        return redirect()->back(); //torno nella stessa pagina
+        return redirect()->back()->with('alert', 'Eliminato con successo!'); //torno nella stessa pagina
     }
 }
 

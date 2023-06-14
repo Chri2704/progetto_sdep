@@ -10,7 +10,11 @@
 <p class="fs-1" style="text-align: center;">Carrello</p>
 <!-- permette di stampare gli ordini e relative informazioni al prodotto,
 dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> invece che [] -->
-
+@if (session('alert'))
+    <div class="alert alert-danger">
+        <p style="text-align: center;" >{{ session('alert') }}</p>
+    </div>
+@endif
 @php
 $totale = 0;
 @endphp

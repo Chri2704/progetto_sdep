@@ -14,6 +14,11 @@
     height: 200px;
 }
 </style>
+@if (session('alert'))
+    <div class="alert alert-success">
+        <p class="center">{{ session('alert') }}</p>
+    </div>
+@endif
 <h1 class="fs-1" style="text-align: center;">Catalogo prodotti disponibili</h1>
 <br>
 <div class="center">
