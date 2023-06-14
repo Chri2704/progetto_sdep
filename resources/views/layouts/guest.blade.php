@@ -25,7 +25,7 @@
 <body>
     {{ $slot }}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container" style="z-index: 10;">
             <a class="navbar-brand pio" href="/">
                 <img src="/images/logo_minimal.jpg" alt="" width="40" height="auto"
                     class="d-inline-block align-text-top">

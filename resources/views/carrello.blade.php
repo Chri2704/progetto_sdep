@@ -1,14 +1,23 @@
 <x-guest-layout>
 </x-guest-layout>
-<h1 class="fs-1" style="text-align: center;">Carrello</h1> 
+<style>
+.centerr {
+  margin: auto;
+  width: 50%;  
+  text-align: center;
+  padding: 10px;
+}
+</style>
+<p class="fs-1" style="text-align: center;">Carrello</p>
 <!-- permette di stampare gli ordini e relative informazioni al prodotto,
 dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> invece che [] -->
 
 @php
-         $totale = 0; 
-    @endphp
+$totale = 0;
+@endphp
 
-
+@if (Route::has('login'))
+@auth
 <table class="table">
     <thead>
         <tr>
@@ -23,8 +32,8 @@ dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> i
         </tr>
     </thead>
     <tbody>
-
-
+    <form action="{{url('delete')}}" method="POST" enctype="multipart/form-data">
+        @csrf
         @foreach ($orders as $order)
         <tr>
             <th scope="row">#{{$order->id}}</th>
@@ -36,24 +45,30 @@ dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> i
             <td style="text-align: center;">{{$order->prezzo}}€</td>
             <td style="text-align: center;">
                 @php
-                    $subtotal = $order->prezzo * $order->quantity; // Calcola il subtotal per l'ordine corrente
-                    $totale += $subtotal; // Aggiorna il totale sommando il subtotal all'importo totale precedente
+                $subtotal = $order->prezzo * $order->quantity; // Calcola il subtotal per l'ordine corrente
+                $totale += $subtotal; // Aggiorna il totale sommando il subtotal all'importo totale precedente
                 @endphp
                 {{$subtotal}}
-            €</td>
+                €</td>
             <td>
-                <button type="button" class="btn btn-outline-danger" name="{{$order->id}}">Cancella</button>
+                <button type="submit" class="btn btn-outline-danger" name="delete" value="{{$order->id}}">Cancella</button>
             </td>
         </tr>
         @endforeach
+    </form>
     </tbody>
 </table>
 <label class="input-group-text rounded">
 
-<!--  Stampa il totale aggiornato -->
+    <!--  Stampa il totale aggiornato -->
 
     @php
-        echo "Totale: $totale €"; 
+    echo "Totale: $totale €";
     @endphp
 </label>
 <button type="button" class="btn btn-outline-success">Acquista</button>
+
+@else
+<p class="fs-2 centerr" >Non hai effettauto il log-in per accedere al tuo carrello</p>
+@endauth
+@endif

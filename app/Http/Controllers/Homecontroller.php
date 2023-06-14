@@ -57,5 +57,11 @@ class Homecontroller extends Controller //classe home controller
         ->get(); //prende risultato query
         return view('carrello',compact('orders')); //invia i dati a carrello.blade.php tramite $orders
     }
+    function deleteCarrello(Request $request){
+        // fa il drop della riga della tabella orders, dove ordine id è uguale a quello selezionato
+        // dall'utente nel carrello
+        $deleted = DB::table('orders')->where('id',$request->delete)->delete();
+        return redirect()->back(); //torno nella stessa pagina
+    }
 }
 

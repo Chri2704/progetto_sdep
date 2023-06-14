@@ -25,7 +25,11 @@ route::get('contatti', [Homecontroller::class, 'contatti']);
 
 Route::get('/carrello',[Homecontroller::class,'showCarrello']);
 
+route::post('/delete', [Homecontroller::class,'deleteCarrello']);
+
 Route::get('/catalogo',[ProductsController::class,'showCatalogo']);
+
+
 
 Route::middleware([
     'auth:sanctum',
