@@ -48,6 +48,8 @@ function flushJobs() {
   flushing = false;
 }
 
+
+
 // packages/alpinejs/src/reactivity.js
 var reactive;
 var effect;
