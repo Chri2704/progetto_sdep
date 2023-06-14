@@ -11,13 +11,21 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
     <style>
+    /* per icona carrello */
     .material-symbols-outlined {
         font-variation-settings:
             'FILL'0,
             'wght'400,
             'GRAD'0,
             'opsz'48
+    }
+
+    .selected {
+        color: white;
+        background-color: #0d6efd;
+        border-radius: 30px;
     }
     </style>
 </head>
@@ -33,15 +41,34 @@
             </a>
 
             <ul class="nav ms-auto navbar-spaced">
+                <!-- cambia colore sfondo in base alla pagina selezionata -->
+                @if (request()->url() == url('/catalogo'))
+                <li class="">
+                    <a class=" selected nav-link active" aria-current="page" href="catalogo">Prodotti</a>
+                </li>
+                @else
                 <li class="">
                     <a class="nav-link active" aria-current="page" href="catalogo">Prodotti</a>
                 </li>
+                @endif
+                @if (request()->url() == url('/menu'))
+                <li class="">
+                    <a class="selected nav-link active" href="">Menù</a>
+                </li>
+                @else
                 <li class="">
                     <a class="nav-link active" href="">Menù</a>
                 </li>
+                @endif
+                @if (request()->url() == url('/contatti'))
+                <li class="nav ms-auto navbar-spaced">
+                    <a class="selected nav-link active" href="contatti">Chi siamo</a>
+                </li>
+                @else
                 <li class="nav ms-auto navbar-spaced">
                     <a class="nav-link active" href="contatti">Chi siamo</a>
                 </li>
+                @endif
                 <!-- se è stato effettuato login si vede solo nome che se cliccato porta alla dashboard altrimenti tasti registra e login -->
                 @if (Route::has('login'))
 
@@ -88,9 +115,15 @@
                 @endauth
                 @endif
             </ul>
+            @if (request()->url() == url('/carrello'))
+            <span class="material-symbols-sharp">
+                <a href="/carrello">shopping_cart</a>
+            </span>
+            @else
             <span class="material-symbols-outlined">
                 <a href="/carrello">shopping_cart</a>
             </span>
+            @endif
         </div>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

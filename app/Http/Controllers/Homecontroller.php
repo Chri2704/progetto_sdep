@@ -55,6 +55,7 @@ class Homecontroller extends Controller //classe home controller
         ->select('orders.*','descrizione','nome_prodotto','prezzo','image','disponibili')
         ->where('user_id',auth()->id()) //prendo soltanto gli ordini dell utente che è loggato atm
         ->get(); //prende risultato query
+        //return $orders;
         return view('carrello',compact('orders')); //invia i dati a carrello.blade.php tramite $orders
     }
     function deleteCarrello(Request $request){
