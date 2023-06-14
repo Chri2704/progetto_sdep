@@ -17,7 +17,6 @@
     <div style="overflow:auto;">
         <div style="float: left;">
             <p class="fs-4">
-
                 Indirizzo: Via Palestro, 39, 00185 Roma, Italia <br>
                 Telefono: +0677306050 <br>
                 Email: info@tad_apd.it <br>
@@ -29,6 +28,7 @@
             </p>
         </div>
         <div style="float: right;">
+            <p class="fs-4" style="text-align: center;">Puoi trovarci qui: </p>
             <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
                 <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
                 <script>
@@ -58,27 +58,28 @@
                     var to = d.getElementsByTagName('script')[0];
                     to.parentNode.insertBefore(s, to);
                 })();
-                </script><a href="https://1map.com/it/map-embed%22%3E1 Map"></a></div>
+                </script><a href="https://1map.com/it/map-embed%22%3E1 Map"></a>
+            </div>
         </div>
     </div>
     <br>
     <p class=" fw-semibold">
-                    Perché scegliere i nostri tortellini?
-                    </p>
-                    <p>
-                        I nostri tortellini sono realizzati con passione e dedizione dai nostri abili artigiani,
-                        che tramandano l'arte della produzione di pasta da generazioni. Ci impegniamo a garantire
-                        un'accuratezza
-                        assoluta nella qualità dei nostri prodotti,
-                        utilizzando solo gli ingredienti più freschi e selezionati. Ecco un video dimostrazione: <br>
-                        <br>
-                    </p>
-            </div>
+        Perché scegliere i nostri tortellini?
+    </p>
+    <p>
+        I nostri tortellini sono realizzati con passione e dedizione dai nostri abili artigiani,
+        che tramandano l'arte della produzione di pasta da generazioni. Ci impegniamo a garantire
+        un'accuratezza
+        assoluta nella qualità dei nostri prodotti,
+        utilizzando solo gli ingredienti più freschi e selezionati. Ecco un video dimostrazione: <br>
+        <br>
+    </p>
+</div>
 
-            <div style=" display: flex; justify-content: center;">
-                <video width="300" height="800" controls style="border: 2px solid #000000; border-radius: 30px;">
-                    <source src="/video/Tad&Apd.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+<div style=" display: flex; justify-content: center;">
+    <video width="300" height="800" controls style="border: 2px solid #000000; border-radius: 30px;">
+        <source src="/video/Tad&Apd.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</div>
