@@ -39,4 +39,16 @@ Route::group(['middleware' => ['auth','admin']], function(){
     Route::get('/dashboard',function(){
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/admin/newprod',function(){
+        return view('admin/newprod');
+    })->name('admin/newprod');
+    Route::get('/admin/userslist',function(){
+        return view('admin/userslist');
+    })->name('admin/userslist');
+    Route::get('/admin/modprod',function(){
+        return view('admin/modprod');
+    })->name('admin/modprod');
+    Route::get('/admin/orders',function(){
+        return view('admin/orders');
+    })->name('admin/orders');
 });

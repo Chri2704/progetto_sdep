@@ -1,41 +1,30 @@
 <x-app-layout>
-
-<!-- form per aggiunta prodotti -->
-<br>
-<h1 class="fs-1" style="text-align: center;">Area per inserimento di un nuovo prodotto</h1> 
-<div style="padding-top: 3%; padding-Left:1%; padding-right:12%">
-    <h2 class="fs-2">Prodotto:</h2><br>
-
-    <form action="{{url('upload_post')}}" method="POST" enctype="multipart/form-data">
-
-    <!-- token che genera campo nascosto di protezione nel form. Laravvel controlla corrispondenza token altrimenti respinge la richiesta -->
-    @csrf 
-
-            <div class="input-group mb-3">
-                <label class="input-group-text rounded">*Nome: </label>
-                <input type="text" name="name" placeholder="Nome" class="form-control rounded" aria-label="Username" required>
-            </div>
-            <div class="input-group mb-3">
-                <label class="input-group-text rounded">*Prezzo: </label>
-                <input type="number" placeholder="x.xx €" class="form-control rounded"  style="width: 25%;" name="price" required>
-            </div>
-            <!-- <div class="input-group mb-3">
-                <label class="input-group-text rounded">*Disponibilità: </label>
-                <input type="number" class="form-control rounded"  style="width: 25%;" name="dispo" required>
-            </div> -->
-            <div class="mb-3">
-                <label class="form-label">*Descrizione: </label>
-                <input type="text" class="form-control rounded" name="description" required>
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">*Inserisci immagine</label>
-                <input type="file" name="image" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-primary bg-primary">Conferma</button>
-                <h3 style="text-align: right;">*campi obbligatori</h3>
-            </div>
-
-    </form>
-</div>
+    <style>
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        border-style: hidden;
+    }
+    table td {
+        padding: 15px;
+        border: 3px solid;
+      }
+    .icons {
+        width: 300px;
+        height: 300px;
+    }
+    </style>
+    <table>
+      <tr>
+        <td><a href="admin/userslist"><img class="icons" src="images/icons/users.png" alt="users"></a></td>
+        <td><a href="admin/modprod"><img class="icons" src="images/icons/items.png" alt="users"></a></td>
+      </tr>
+      <tr>
+      <td><a href="admin/newprod"><img class="icons" src="images/icons/new.png" alt="users"></a></td>
+      <td><a href="admin/orders"><img class="icons" src="images/icons/orders.png" alt="Ordini fatti?!"></a></td>
+      </tr>
+    </table>
 </x-app-layout>
