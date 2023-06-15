@@ -49,14 +49,13 @@
 		legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
 		button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 		button, input { line-height: normal; }
-		button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+		button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer;; *overflow: visible; }
 		button[disabled], input[disabled] { cursor: default; }
 		input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
-		input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+		input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 		input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 		button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 		textarea { overflow: auto; vertical-align: top; resize: vertical; }
-		input:valid, textarea:valid {  }
 		input:invalid, textarea:invalid { background-color: #f0dddd; }
 		table { border-collapse: collapse; border-spacing: 0; }
 		td { vertical-align: top; }
@@ -112,7 +111,7 @@
 
 			<p>
 				We couldn't find the page you requested on our servers. We're not really sorry
-				about that. It's your fault, not our. Don't try to access private ares :D .
+				about that. It's your fault, not our. Don't try to access private areas :D .
 			</p>
 
 			<p>
