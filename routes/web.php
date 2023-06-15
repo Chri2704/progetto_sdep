@@ -34,13 +34,9 @@ route::post('shop',[Homecontroller::class,'shopCarrello']);
 
 Route::get('/catalogo',[ProductsController::class,'showCatalogo']);
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
+//controlli per instradare solo gli admin in certe aree
+Route::group(['middleware' => ['auth','admin']], function(){
+    Route::get('/dashboard',function(){
         return view('dashboard');
     })->name('dashboard');
 });
-

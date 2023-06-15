@@ -77,7 +77,7 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary bg-primary dropdown-toggle" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="{{route('dashboard')}}">{{Auth::user()->name }}</a>
+                            {{Auth::user()->name }}
                         </button>
                         <div class="dropdown-content">
                             <x-slot name="content">
