@@ -70,7 +70,7 @@ class Homecontroller extends Controller //classe home controller
         //elimina tutti gli ordini dell'user e manda alet
         $deleted = DB::table('orders')->where('user_id',auth()->id())->delete();
         return redirect()->back() //prende anche la mail dell utente
-        ->with('alert2', 'I tuoi prodotti sono stati acquistati, per maggiori info consulare la mail: '.Auth::user()->email); 
+        ->with('alert2', 'I tuoi prodotti sono stati acquistati, per maggiori info consultare la mail: '.Auth::user()->email); 
     }
 }
 
