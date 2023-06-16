@@ -19,10 +19,6 @@
                 <label class="input-group-text rounded">*Prezzo: </label>
                 <input type="number" placeholder="x.xx €" class="form-control rounded"  style="width: 25%;" name="price" required>
             </div>
-            <!-- <div class="input-group mb-3">
-                <label class="input-group-text rounded">*Disponibilità: </label>
-                <input type="number" class="form-control rounded"  style="width: 25%;" name="dispo" required>
-            </div> -->
             <div class="mb-3">
                 <label class="form-label">*Descrizione: </label>
                 <input type="text" class="form-control rounded" name="description" required>

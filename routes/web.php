@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\Homecontroller; //route Home controller
@@ -30,6 +31,10 @@ Route::get('/carrello',[Homecontroller::class,'showCarrello']);
 
 route::post('/delete', [Homecontroller::class,'deleteCarrello']);
 
+route::post('/deleteuser', [AdminController::class,'deleteUser']);
+
+route::post('/deleteprod', [AdminController::class,'deleteProd']);
+
 route::post('shop',[Homecontroller::class,'shopCarrello']);
 
 Route::get('/catalogo',[ProductsController::class,'showCatalogo']);
@@ -42,12 +47,8 @@ Route::group(['middleware' => ['auth','admin']], function(){
     Route::get('/admin/newprod',function(){
         return view('admin/newprod');
     })->name('admin/newprod');
-    Route::get('/admin/userslist',function(){
-        return view('admin/userslist');
-    })->name('admin/userslist');
-    Route::get('/admin/modprod',function(){
-        return view('admin/modprod');
-    })->name('admin/modprod');
+    Route::get('/admin/userslist',[AdminController::class,'list'])->name('admin/userslist');
+    Route::get('/admin/modprod',[AdminController::class,'modProdView'])->name('admin/modprod');
     Route::get('/admin/orders',function(){
         return view('admin/orders');
     })->name('admin/orders');
