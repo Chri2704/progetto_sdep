@@ -63,7 +63,10 @@
         </div>
         
         @else
+        <div class="col-md-6 float-right">
         <a class="btn btn-success" href="{{route('login')}}">Login per acquistare</a>
+        </div>
+        </div>
         @endauth
         @endif
     </form>

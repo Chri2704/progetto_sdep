@@ -2,8 +2,8 @@
 
 <!-- form per aggiunta prodotti -->
 <br>
-<h1 class="fs-1" style="text-align: center;">Area per inserimento di un nuovo prodotto</h1> 
-<div style="padding-top: 3%; padding-Left:1%; padding-right:12%">
+<h1 class="fs-1 boldi" style="text-align: center;">Area per inserimento di un nuovo prodotto</h1> 
+<div class="formProdotto float-center">
     <h2 class="fs-2">Prodotto:</h2><br>
 
     <form action="{{url('upload_post')}}" method="POST" enctype="multipart/form-data">
