@@ -19,7 +19,7 @@
         height: 245px;
     }
     </style>
-    <table>
+    <table style="margin-top: 10%">
         <tr>
             <td><a href="admin/userslist"><img class="icons" src="images/icons/users.png" alt="users"></a></td>
             <td><a href="admin/modprod"><img class="icons" src="images/icons/items.png" alt="users"></a></td>

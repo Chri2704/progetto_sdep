@@ -18,7 +18,6 @@ class TortDyb extends Seeder
             'nome_prodotto' => 'Tortellini alla Dybala',
             'descrizione' => 'Pacco da 500g, leggendari tortellini di Pauolo Dybala',
             'prezzo' => 20,
-            'disponibili' => 100,
             'image' => 'tort_dybala.jpg',
         ]);
     }
