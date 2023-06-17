@@ -5,7 +5,7 @@
         margin: 0 auto;
         margin-left: auto;
         margin-right: auto;
-        margin-top: auto;
+        margin-top: 1%;
         border-style: hidden;
     }
 
@@ -19,7 +19,7 @@
         height: 245px;
     }
     </style>
-    <table style="margin-top: 10%">
+    <table>
         <tr>
             <td><a href="admin/userslist"><img class="icons" src="images/icons/users.png" alt="users"></a></td>
             <td><a href="admin/modprod"><img class="icons" src="images/icons/items.png" alt="users"></a></td>
