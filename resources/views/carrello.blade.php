@@ -6,6 +6,11 @@
     text-align: center;
     padding: 10px;
 }
+.centerimg {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
 </style>
 <p class="fs-1" style="text-align: center;">Carrello</p>
 <!-- permette di stampare gli ordini e relative informazioni al prodotto,
