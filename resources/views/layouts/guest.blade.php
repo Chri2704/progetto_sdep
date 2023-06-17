@@ -51,15 +51,6 @@
                     <a class="nav-link active" aria-current="page" href="catalogo">Prodotti</a>
                 </li>
                 @endif
-                @if (request()->url() == url('/menu'))
-                <li class="">
-                    <a class="selected nav-link active" href="">Menù</a>
-                </li>
-                @else
-                <li class="">
-                    <a class="nav-link active" href="menu">Menù</a>
-                </li>
-                @endif
                 @if (request()->url() == url('/contatti'))
                 <li class="nav ms-auto navbar-spaced">
                     <a class="selected nav-link active" href="contatti">Chi siamo</a>
