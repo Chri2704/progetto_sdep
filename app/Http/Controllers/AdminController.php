@@ -24,8 +24,8 @@ class AdminController extends Controller
         return view('admin/modprod',compact('prods'));
     }
     function deleteProd(Request $request){
-        DB::table('orders')->where('product_id',$request->deleteuser)->delete();
-        DB::table('products')->where('id',$request->deleteuser)->delete();
+        DB::table('orders')->where('product_id',$request->deleteprod)->delete();
+        DB::table('products')->where('id',$request->deleteprod)->delete();
         return redirect()->back()->with('alert', 'Eliminato con successo!'); //torno nella stessa pagina con alert
     }
 }

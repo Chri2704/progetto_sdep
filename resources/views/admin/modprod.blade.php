@@ -23,7 +23,7 @@
                 <th scope="row">{{$prod['id']}}</th>
                 <td><img src="{{ asset('images/db/'.$prod->image)}}" alt="Immagine" class="centerimg"></td>
                 <td>{{$prod['nome_prodotto']}} <br>
-                    <button type="submit" class="btn btn-outline-info" name="deleteprod" value="{{$prod['id']}}">
+                    <button type="submit" class="btn btn-outline-info" name="modname" value="{{$prod['nome_prodotto']}}">
                         Modifica nome</button>
                 </td>
                 <td>{{$prod['created_at']}}</td>
@@ -33,7 +33,7 @@
                         Modifica descrizione</button>
                 </td>
                 <td>{{$prod['prezzo']}}€
-                    <button type="submit" class="btn btn-outline-info" name="deleteprod" value="{{$prod['id']}}">
+                    <button type="submit" class="btn btn-outline-info" name="modprez" value="{{$prod['prezzo']}}">
                         Modifica prezzo</button>
                 </td>
                 <td>
