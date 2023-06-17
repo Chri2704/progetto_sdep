@@ -1,4 +1,11 @@
 <x-app-layout>
+    <style>
+        .centerimg {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+    </style>
     @if (session('alert'))
     <div class="alert alert-danger">
         <p style="text-align: center;" class="fs-4">{{ session('alert') }}</p>
