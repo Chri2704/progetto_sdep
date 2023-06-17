@@ -17,27 +17,36 @@
             </tr>
         </thead>
         <tbody>
-            <form action="{{url('deleteprod')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @foreach ($prods as $prod)
-                <tr>
-                    <th scope="row">{{$prod['id']}}</th>
-                    <td><img src="{{ asset('images/db/'.$prod->image)}}" alt="Immagine" class="centerimg"></td>
-                    <td>{{$prod['nome_prodotto']}} <br>
-                        <button type="submit" class="btn btn-outline-info" name="deleteprod" value="{{$prod['id']}}">
-                            Modifica</button>
-                    </td>
-                    <td>{{$prod['created_at']}}</td>
-                    <td>{{$prod['descrizione']}}</td>
-                    <td>{{$prod['prezzo']}}€</td>
-                    <td>
+
+            @foreach ($prods as $prod)
+            <tr>
+                <th scope="row">{{$prod['id']}}</th>
+                <td><img src="{{ asset('images/db/'.$prod->image)}}" alt="Immagine" class="centerimg"></td>
+                <td>{{$prod['nome_prodotto']}} <br>
+                    <button type="submit" class="btn btn-outline-info" name="deleteprod" value="{{$prod['id']}}">
+                        Modifica nome</button>
+                </td>
+                <td>{{$prod['created_at']}}</td>
+                <td>{{$prod['descrizione']}}
+                    <button type="submit" class="btn btn-outline-info" name="moddesc" value="{{$prod['descrizione']}}"
+                        onclick="return prompt('Inserisci una nuova descrizione');">
+                        Modifica descrizione</button>
+                </td>
+                <td>{{$prod['prezzo']}}€
+                    <button type="submit" class="btn btn-outline-info" name="deleteprod" value="{{$prod['id']}}">
+                        Modifica prezzo</button>
+                </td>
+                <td>
+                    <form action="{{url('deleteprod')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <button type="submit" class="btn btn-outline-danger" name="deleteprod" value="{{$prod['id']}}"
                             onclick="return confirm('Sicuro di eliminare prodotto, eliminerai pure tutti prodotti nei carrelli');">
                             Cancella</button>
-                    </td>
-                </tr>
-                @endforeach
-            </form>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+
         </tbody>
     </table>
 </x-app-layout>

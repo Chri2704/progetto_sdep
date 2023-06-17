@@ -19,8 +19,6 @@ class Homecontroller extends Controller //classe home controller
         $data->nome_prodotto = $request->name; // nel nome prodotto di product inserisco ciò che mando con la POST dell'input del form
         $data->prezzo = $request->price;
         $data->descrizione = $request->description;
-        //quantità disponibile
-        $data->disponibili = $request->dispo;
         //passi per salvare immagine
         $file = $request->file('image');
         $extention = $file->getClientOriginalExtension();
@@ -54,7 +52,7 @@ class Homecontroller extends Controller //classe home controller
         //4 parametri ma soltanto 2!
         $orders = DB::table('orders')
         ->join('products','orders.product_id',"=",'products.id') //join che permette di prendere dati prodotto
-        ->select('orders.*','descrizione','nome_prodotto','prezzo','image','disponibili')
+        ->select('orders.*','descrizione','nome_prodotto','prezzo','image')
         ->where('user_id',auth()->id()) //prendo soltanto gli ordini dell utente che è loggato atm
         ->get(); //prende risultato query
         //return $orders;
