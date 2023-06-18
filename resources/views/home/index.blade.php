@@ -55,3 +55,33 @@
     <button class="pulsantino btn btn-primary btn-lg"><a class="nav-link active" href="contatti">Contattaci!</a></button>
     </div>
 </div>
+
+
+
+<footer class="bg-dark text-light">
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="mb-4 boldi">Informazioni</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light">Chi siamo</a></li>
+          <li><a href="#" class="text-light">Contatti</a></li>
+          <li><a href="#" class="text-light">Termini e condizioni</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h4 class="mb-4 boldi">Servizi</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light">Prodotti</a></li>
+          <li><a href="#" class="text-light">Offerte speciali</a></li>
+          <li><a href="#" class="text-light">Spedizioni</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <p class="text-center">Tutti i diritti riservati &copy; 2023 Tad&Apd. Realizzato con amore da <a href="https://github.com/Cassio7" class="text-light" style="text-decoration: underline">Alessio</a> e <a href="https://github.com/Chri2704" class="text-light" style="text-decoration: underline" >e Christian</a>.</p>
+  </div>
+</footer>
+
+

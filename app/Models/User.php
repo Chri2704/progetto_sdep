@@ -59,6 +59,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    //relazione 1 a molti user ordini
     public function ordini()
         {
             return $this->hasMany(Orders::class);
