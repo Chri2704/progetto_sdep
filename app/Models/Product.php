@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+// modello relazione tra prodotti e ordini
 class Product extends Model
 {
     use HasFactory;

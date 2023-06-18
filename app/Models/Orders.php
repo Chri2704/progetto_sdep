@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
+//modello per relazionare order e users molti a uno
 class Orders extends Model
 {
     use HasFactory;

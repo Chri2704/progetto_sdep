@@ -27,6 +27,8 @@ route::get('contatti', [Homecontroller::class, 'contatti']);
 
 Route::get('/carrello',[Homecontroller::class,'showCarrello']);
 
+Route::get('/dev',[Homecontroller::class,'dev']);
+
 route::post('/delete', [Homecontroller::class,'deleteCarrello']);
 
 route::post('/deleteuser', [AdminController::class,'deleteUser']);

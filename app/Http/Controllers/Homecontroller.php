@@ -13,6 +13,33 @@ class Homecontroller extends Controller //classe home controller
         return view('home.index');
     }
 
+
+    public function dev(Request $request){  
+        // $prodotti = Product::all();
+        $prodotti = DB::select('select * from products');
+        $ordini = DB::select('select * from orders');
+        $users = DB::select('select * from users');
+        
+        $risposta = [
+            'prodotti' => $prodotti,
+            'ordini' => $ordini,
+            'utenti' => $users
+        ];
+
+        $rispostaOrdinata = json_encode($risposta, JSON_PRETTY_PRINT);
+
+        return response($rispostaOrdinata, 200)->header('Content-Type', 'application/json');
+
+
+        // return response()->json([
+        //     'prodotti' => $prodotti,
+        //     'ordini' => $ordini,
+        //     'utenti' => $users
+        // ]);
+
+
+    }
+
     public function upload(Request $request){
 
         $data = new Product; //data oggetto di tipo product 
@@ -26,7 +53,7 @@ class Homecontroller extends Controller //classe home controller
         $file->move('images/db/',$filename);
         $data->image = $filename;
 
-        $data->save(); //penso salvi il formato interno di $data
+        $data->save(); //salva il formato interno di $data
 
         return redirect()->back(); //alla fine della funzione ritorna nella stessa pagina (quindi di nuovo nella dashbpard)
 
