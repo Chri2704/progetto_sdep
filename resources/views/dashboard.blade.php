@@ -21,12 +21,26 @@
     </style>
     <table>
         <tr>
-            <td><a href="admin/userslist"><img class="icons" src="images/icons/users.png" alt="users"></a></td>
-            <td><a href="admin/modprod"><img class="icons" src="images/icons/items.png" alt="users"></a></td>
+            <td>
+                <a href="admin/userslist">
+                    <p class="fs-4" style="text-align: center;">Lista utenti</p>
+                    <img class="icons" src="images/icons/users.png" alt="users">
+                </a>
+            </td>
+            <td>
+                <a href="admin/modprod">
+                    <p class="fs-4" style="text-align: center;">Modifica prodotto:</p>
+                    <img class="icons" src="images/icons/items.png" alt="users">
+                </a>
+            </td>
         </tr>
         <tr>
-            <td><a href="admin/newprod"><img class="icons" src="images/icons/new.png" alt="users"></a></td>
-            <td><a href="admin/orders"><img class="icons" src="images/icons/orders.png" alt="Ordini fatti?!"></a></td>
+            <td>
+                <a href="admin/newprod">
+                    <p class="fs-4" style="text-align: center;">Nuovo prodotto</p>
+                    <img class="icons" src="images/icons/new.png" alt="users">
+                </a>
+            </td>
         </tr>
     </table>
 </x-app-layout>
