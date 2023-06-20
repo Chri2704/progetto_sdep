@@ -27,6 +27,11 @@ class AdminController extends Controller
         $prods = Product::all();
         return view('admin/modprod',compact('prods'));
     }
+    function updateProd(Request $request){
+        DB::table('products')->where('id',$request->updateprod)->update(['nome_prodotto' => $request->nome,
+        'descrizione' => $request->desc, 'prezzo' => $request->prezzo]);
+        return redirect()->back()->with('alert2', 'Aggiornato con successo!'); //torno nella stessa pagina con alert
+    }
     function deleteProd(Request $request){
         DB::table('orders')->where('product_id',$request->deleteprod)->delete();
         DB::table('products')->where('id',$request->deleteprod)->delete();

@@ -33,9 +33,11 @@ route::post('/delete', [Homecontroller::class,'deleteCarrello']);
 
 route::post('/deleteuser', [AdminController::class,'deleteUser']);
 
+route::post('/promoteuser', [AdminController::class,'promoteUser']);
+
 route::post('/deleteprod', [AdminController::class,'deleteProd']);
 
-route::post('/promoteuser', [AdminController::class,'promoteUser']);
+route::post('/updateprod', [AdminController::class,'updateProd']);
 
 route::post('shop',[Homecontroller::class,'shopCarrello']);
 

@@ -18,7 +18,6 @@ class CreateProducts extends Migration
             $table->timestamps();
             $table->string('nome_prodotto');
             $table->text('descrizione');
-            
             $table->integer('prezzo');
             $table->string('image');
         });
