@@ -1,6 +1,6 @@
 <x-app-layout>
     <script>
-    // modifica la vista e permette inserimentro tramite input
+    // modifica la vista, mette in show gli input type e nasconde il testo p, dentro x trovo id corrispondete
     function modProd(x) {
         let nome = document.getElementById("nome" + x);
         let i_nome = document.getElementById("i_nome" + x);
@@ -54,9 +54,11 @@
         <tbody>
             @foreach ($prods as $prod)
             <tr>
+                <!-- form per invio dati se viene fatto update -->
                 <form action="{{url('updateprod')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <th scope="row">{{$prod['id']}}</th>
+                    <!-- su quasi tutti i td sono presenti 2 p, uno è il testo l'altro è input type che all'inizio è nascosto -->
                     <td><img src="{{ asset('images/db/'.$prod->image)}}" alt="Immagine" class="centerimg"></td>
                     <td>
                         <p id="nome{{$prod['id']}}">{{$prod['nome_prodotto']}}</p>
@@ -81,12 +83,14 @@
                         <button type="button" class="btn btn-outline-info" id="mod{{$prod['id']}}" value="{{$prod['id']}}"
                             onclick="modProd(value)">
                             Modifica</button>
+                        <!-- il bottone sotto manda il form di update, è invisibile fino a al click di Modifica -->
                         <button type="submit" class="btn btn-outline-warning" name="updateprod"
                             id="update{{$prod['id']}}" value="{{$prod['id']}}" style="display: none;">
-                            Mannala</button>
+                            Update</button>
                     </td>
                 </form>
                 <td>
+                    <!-- elimina il prodotto -->
                     <form action="{{url('deleteprod')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <button type="submit" class="btn btn-outline-danger" name="deleteprod" value="{{$prod['id']}}"
