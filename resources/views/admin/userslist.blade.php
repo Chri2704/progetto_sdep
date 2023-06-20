@@ -12,30 +12,49 @@
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
                 <th scope="col">Data creazione</th>
+                <th scope="col">Admin</th>
+                <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            <form action="{{url('deleteuser')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @foreach ($users as $user)
-                <tr>
-                    <th scope="row">{{$user['id']}}</th>
-                    <td>{{$user['name']}}</td>
-                    <td>{{$user['email']}}</td>
-                    <td>{{$user['password']}}</td>
-                    <td>{{$user['created_at']}}</td>
-                    <td>
-                        @if (!$user['admin'])
-                        <button type="submit" class="btn btn-outline-danger" name="deleteuser"
-                            value="{{$user['id']}}" 
+
+            @foreach ($users as $user)
+            <tr>
+                <th scope="row">{{$user['id']}}</th>
+                <td>{{$user['name']}}</td>
+                <td>{{$user['email']}}</td>
+                <td>{{$user['password']}}</td>
+                <td>{{$user['created_at']}}</td>
+                <td>@if ($user['admin'])
+                    Si
+                    @else
+                    No
+                    @endif
+                </td>
+                <td>
+                    @if (!$user['admin'])
+                    <form action="{{url('deleteuser')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-danger" name="deleteuser" value="{{$user['id']}}"
                             onclick="return confirm('Sicuro di eliminare utente, eliminerai pure tutti i suoi ordini nel carrello');">
                             Cancella</button>
-                        @endif
-                    </td>
-                </tr>
-                @endforeach
-            </form>
+                    </form>
+                    @endif
+                </td>
+                <td>
+                @if (!$user['admin'])
+                    <form action="{{url('promoteuser')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-warning" name="promoteuser" value="{{$user['id']}}"
+                            onclick="return confirm('Sicuro di promuovere utente ad amministratore?');">
+                            Promuovi</button>
+                    </form>
+                    @endif
+                </td>
+            </tr>
+            @endforeach
+
         </tbody>
     </table>
 </x-app-layout>

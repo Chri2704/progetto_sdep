@@ -19,6 +19,10 @@ class AdminController extends Controller
         DB::table('users')->where('id',$request->deleteuser)->delete();
         return redirect()->back()->with('alert', 'Eliminato con successo!'); //torno nella stessa pagina con alert
     }
+    function promoteUser(Request $request){
+        DB::table('users')->where('id',$request->promoteuser)->update(['admin' => 1]);
+        return redirect()->back()->with('alert', 'Aggiornato con successo!'); //torno nella stessa pagina con alert
+    }
     function modProdView(){
         $prods = Product::all();
         return view('admin/modprod',compact('prods'));

@@ -35,6 +35,8 @@ route::post('/deleteuser', [AdminController::class,'deleteUser']);
 
 route::post('/deleteprod', [AdminController::class,'deleteProd']);
 
+route::post('/promoteuser', [AdminController::class,'promoteUser']);
+
 route::post('shop',[Homecontroller::class,'shopCarrello']);
 
 Route::get('/catalogo',[ProductsController::class,'showCatalogo']);
