@@ -1,10 +1,18 @@
 <x-app-layout>
+    <script>
+    function modProd(x) {
+        let nome = document.getElementById("nome");
+        let i_nome = document.getElementById("i_nome");
+        i_nome.style.display = "block";
+        nome.style.display = "none";
+    }
+    </script>
     <style>
-        .centerimg {
-    display: block;
-    width: 200px;
-    height: 200px;
-}
+    .centerimg {
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
     </style>
     @if (session('alert'))
     <div class="alert alert-danger">
@@ -29,19 +37,15 @@
             <tr>
                 <th scope="row">{{$prod['id']}}</th>
                 <td><img src="{{ asset('images/db/'.$prod->image)}}" alt="Immagine" class="centerimg"></td>
-                <td>{{$prod['nome_prodotto']}} <br>
-                    <button type="submit" class="btn btn-outline-info" name="modname" value="{{$prod['nome_prodotto']}}">
-                        Modifica nome</button>
+                <td>
+                    <p id="nome">{{$prod['nome_prodotto']}}</p>
+                    <p> <input type="text" value="{{$prod['nome_prodotto']}}" class="form-control rounded" id="i_nome" style="display: none;"> </p>
                 </td>
-                <td>{{$prod['created_at']}}</td>
+                <td>{{$prod['created_at']}}
+                </td>
                 <td>{{$prod['descrizione']}}
-                    <button type="submit" class="btn btn-outline-info" name="moddesc" value="{{$prod['descrizione']}}"
-                        onclick="return prompt('Inserisci una nuova descrizione');">
-                        Modifica descrizione</button>
                 </td>
                 <td>{{$prod['prezzo']}}€
-                    <button type="submit" class="btn btn-outline-info" name="modprez" value="{{$prod['prezzo']}}">
-                        Modifica prezzo</button>
                 </td>
                 <td>
                     <form action="{{url('deleteprod')}}" method="POST" enctype="multipart/form-data">
@@ -49,11 +53,15 @@
                         <button type="submit" class="btn btn-outline-danger" name="deleteprod" value="{{$prod['id']}}"
                             onclick="return confirm('Sicuro di eliminare prodotto, eliminerai pure tutti prodotti nei carrelli');">
                             Cancella</button>
-                    </form>
+                    </form><br>
+                    <!-- <form action="{{url('modprod')}}" method="POST" enctype="multipart/form-data"> -->
+                    @csrf
+                    <button class="btn btn-outline-info" name="modprod" value="{{$prod['id']}}" onclick="modProd()">
+                        Modifica</button>
+                    <!-- </form> -->
                 </td>
             </tr>
             @endforeach
-
         </tbody>
     </table>
 </x-app-layout>

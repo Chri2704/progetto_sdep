@@ -80,7 +80,7 @@
       </div>
     </div>
     <hr class="my-4">
-    <p class="text-center">Tutti i diritti riservati &copy; 2023 Tad&Apd. Realizzato con amore da <a href="https://github.com/Cassio7" class="text-light" style="text-decoration: underline">Alessio</a> e <a href="https://github.com/Chri2704" class="text-light" style="text-decoration: underline" >e Christian</a>.</p>
+    <p class="text-center">Tutti i diritti riservati &copy; 2023 Tad&Apd. Realizzato con amore da <a href="https://github.com/Cassio7" class="text-light" style="text-decoration: underline">Alessio</a> e <a href="https://github.com/Chri2704" class="text-light" style="text-decoration: underline" >Christian.</a></p>
   </div>
 </footer>
 
