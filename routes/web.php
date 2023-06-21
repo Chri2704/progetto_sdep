@@ -27,8 +27,6 @@ route::get('contatti', [Homecontroller::class, 'contatti']);
 
 Route::get('/carrello',[Homecontroller::class,'showCarrello']);
 
-Route::get('/dev',[Homecontroller::class,'dev']);
-
 route::post('/delete', [Homecontroller::class,'deleteCarrello']);
 
 route::post('/deleteuser', [AdminController::class,'deleteUser']);
@@ -56,4 +54,5 @@ Route::group(['middleware' => ['auth','admin']], function(){
     Route::get('/admin/orders',function(){
         return view('admin/orders');
     })->name('admin/orders');
+    Route::get('/dev',[Homecontroller::class,'dev'])->name('dev');
 });
