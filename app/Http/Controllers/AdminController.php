@@ -28,8 +28,12 @@ class AdminController extends Controller
         return view('admin/modprod',compact('prods'));
     }
     function updateProd(Request $request){
+        $file = $request->file('image');
+        $extention = $file->getClientOriginalExtension();
+        $filename = time().'.'.$extention;
+        $file->move('images/db/',$filename);
         DB::table('products')->where('id',$request->updateprod)->update(['nome_prodotto' => $request->nome,
-        'descrizione' => $request->desc, 'prezzo' => $request->prezzo]);
+        'descrizione' => $request->desc, 'prezzo' => $request->prezzo, 'image' => $filename]);
         return redirect()->back()->with('alert2', 'Aggiornato con successo!'); //torno nella stessa pagina con alert
     }
     function deleteProd(Request $request){
