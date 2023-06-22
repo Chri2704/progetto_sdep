@@ -6,6 +6,7 @@
     text-align: center;
     padding: 10px;
 }
+
 .centerimg {
     display: block;
     width: 200px;
@@ -16,14 +17,14 @@
 <!-- permette di stampare gli ordini e relative informazioni al prodotto,
 dati passati tramite Homecontroller, a differenza di catalogo li stampo con -> invece che [] -->
 @if (session('alert'))
-    <div class="alert alert-danger">
-        <p style="text-align: center;" class="fs-4" >{{ session('alert') }}</p>
-    </div>
+<div class="alert alert-danger">
+    <p style="text-align: center;" class="fs-4">{{ session('alert') }}</p>
+</div>
 @endif
 @if (session('alert2'))
-    <div class="alert alert-primary">
-        <p style="text-align: center;" class="fs-4" >{{ session('alert2') }}</p>
-    </div>
+<div class="alert alert-primary">
+    <p style="text-align: center;" class="fs-4">{{ session('alert2') }}</p>
+</div>
 @endif
 @php
 $totale = 0;
@@ -42,7 +43,7 @@ $totale = 0;
             <th scope="col">Descrizione</th>
             <th scope="col">Quantità</th>
             <th scope="col" style="text-align: center;">Prezzo unitario</th>
-            <th scope="col">Totale</th>
+            <th scope="col" style="text-align: center;">Totale prod</th>
         </tr>
     </thead>
     <tbody>
@@ -81,11 +82,11 @@ $totale = 0;
     @php
     echo "Totale: $totale €";
     @endphp
-</label>
-<form action="{{url('shop')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{url('shop')}}" method="POST" enctype="multipart/form-data" style="padding-left: 10px;">
     @csrf
     <button type="submit" class="btn btn-outline-success">Acquista</button>
 </form>
+</label>
 @else
 <p class="fs-2 centerr">Il tuo carrello è vuoto!</p>
 @endif

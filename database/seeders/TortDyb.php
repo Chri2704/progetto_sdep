@@ -18,7 +18,7 @@ class TortDyb extends Seeder
     {
         Product::create([
             'nome_prodotto' => 'Tortellini alla Dybala',
-            'descrizione' => 'Pacco da 500g, leggendari tortellini di Pauolo Dybala',
+            'descrizione' => 'Pacco da 500g, leggendari tortellini di Paulo Dybala',
             'prezzo' => 20,
             'image' => 'tort_dybala.jpg'
         ]);

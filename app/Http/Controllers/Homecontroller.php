@@ -27,17 +27,7 @@ class Homecontroller extends Controller //classe home controller
         ];
 
         $rispostaOrdinata = json_encode($risposta, JSON_PRETTY_PRINT);
-
         return response($rispostaOrdinata, 200)->header('Content-Type', 'application/json');
-
-
-        // return response()->json([
-        //     'prodotti' => $prodotti,
-        //     'ordini' => $ordini,
-        //     'utenti' => $users
-        // ]);
-
-
     }
 
     public function upload(Request $request){

@@ -33,6 +33,7 @@
                     @endif
                 </td>
                 <td>
+                    <!-- se id corrente non è admin stampo i bottoni per la promozione e cancellazione-->
                     @if (!$user['admin'])
                     <form action="{{url('deleteuser')}}" method="POST" enctype="multipart/form-data">
                         @csrf

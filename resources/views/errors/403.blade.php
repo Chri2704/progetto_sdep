@@ -1,3 +1,4 @@
+<!-- pagina di errore presa da https://github.com/yajra/laravel-admin-template -->
 <!doctype html>
 <html lang="en">
 <head>
