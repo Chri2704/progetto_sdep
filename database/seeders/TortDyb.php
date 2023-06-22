@@ -52,29 +52,5 @@ class TortDyb extends Seeder
             'prezzo' => 11,
             'image' => 'gluten.jpg'
         ]);
-        // Product::create([
-        //     'nome_prodotto' => 'Tortellini Barilla',
-        //     'descrizione' => 'Pacco da 250g, collaborazione con barilla ad un prezzo wow',
-        //     'prezzo' => 12.10,
-        //     'image' => 'tort_barilla.jpg'
-        // ]);
-        // Product::create([
-        //     'nome_prodotto' => 'Tortellini Barilla',
-        //     'descrizione' => 'Pacco da 250g, collaborazione con barilla ad un prezzo wow',
-        //     'prezzo' => 12.10,
-        //     'image' => 'tort_barilla.jpg'
-        // ]);
-        // Product::create([
-        //     'nome_prodotto' => 'Tortellini Barilla',
-        //     'descrizione' => 'Pacco da 250g, collaborazione con barilla ad un prezzo wow',
-        //     'prezzo' => 12.10,
-        //     'image' => 'tort_barilla.jpg'
-        // ]);
-        // Product::create([
-        //     'nome_prodotto' => 'Tortellini Barilla',
-        //     'descrizione' => 'Pacco da 250g, collaborazione con barilla ad un prezzo wow',
-        //     'prezzo' => 12.10,
-        //     'image' => 'tort_barilla.jpg'
-        // ]);
     }
 }

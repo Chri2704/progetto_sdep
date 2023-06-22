@@ -23,18 +23,6 @@ class Admin extends Seeder
             'remember_token' => Str::random(10),
             'admin' => 1,
         ]);
-    }
-}
-
-class Amico extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
         User::create([
             'name' => 'massimo',
             'email' => 'massimo@visconti.com',
